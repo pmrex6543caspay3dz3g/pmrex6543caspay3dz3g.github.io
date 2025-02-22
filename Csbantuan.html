@@ -1,0 +1,85 @@
+<body bgcolor="#2c2424"></body>
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<div class="page_title" style="background: #df543f;display: flex;justify-content: space-between;padding: 12px 12px;border-radius: 0;margin: 0;">
+  <div onclick="window.location.href='index.html'"><i class="fa fa-chevron-left"></i></div>
+  <div>Cs bantuan </div>
+  <div></div>
+</div>
+
+<p></p>
+
+
+<div class="page_title" style="background: transparent;display: flex;justify-content: space-between;padding: 12px 12px;border-radius: 0;margin: 0;">
+  <div onclick="window.location.href='Csbantuan.html'"><i class="">                 <button style="background-color: #535759; border: none; cursor: pointer; width: 350px; height: 50px;"><span style="color:#9b8b8b;">Muat ulang</span></button> </i></div>
+  <div></div>
+  <div></div>
+</div>
+
+
+
+
+
+
+
+<body>
+<div class="container">
+               <button style="background-color: transparent; border: none; cursor: pointer; width: 100px; height: 1px;"></button>
+               <p>               <button style="background-color: transparent; border: none; cursor: pointer; width: 0px; height: 1px;"></button></p>
+               <p>               <button style="background-color: transparent; border: none; cursor: pointer; width: 0px; height: 1px;"></button></p>
+
+
+               <button style="background-color: transparent; border: none; cursor: pointer; width: 150px; height: 1px;"></button>
+
+
+<button style="background-color: #2c2424; color: #ffffff; border: none; padding: 10px 20px; font-size: 24px;">
+  <span id="hitung-mundur">10</span>
+</button>
+
+<script>
+  let waktu = 10;
+  let hitungMundur = document.getElementById('hitung-mundur');
+  let intervalId = null;
+
+  intervalId = setInterval(function() {
+    hitungMundur.textContent = waktu--;
+    if (waktu == 0) {
+      clearInterval(intervalId);
+      hitungMundur.textContent = "";
+    }
+  }, 1000);
+</script>
+<p></p>
+               <button style="background-color: transparent; border: none; cursor: pointer; width: 40px; height: 1px;"></button>
+<span style="color:#9b8b8b;">Live chat akan muncul dalam waktu...</span>
+<p></p>
+
+               <button style="background-color: transparent; border: none; cursor: pointer; width: 40px; height: 1px;"></button>
+<span style="color: #e95252;">Pastikan jaringan internet anda setabil,</span>
+
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+<!-- Start of LiveChat (www.livechat.com) code -->
+<script>
+    window.__lc = window.__lc || {};
+    window.__lc.license = 19034585;
+    window.__lc.integration_name = "manual_channels";
+    window.__lc.product_name = "livechat";
+    ;(function(n,t,c){function i(n){return e._h?e._h.apply(null,n):e._q.push(n)}var e={_q:[],_h:null,_v:"2.0",on:function(){i(["on",c.call(arguments)])},once:function(){i(["once",c.call(arguments)])},off:function(){i(["off",c.call(arguments)])},get:function(){if(!e._h)throw new Error("[LiveChatWidget] You can't use getters before load.");return i(["get",c.call(arguments)])},call:function(){i(["call",c.call(arguments)])},init:function(){var n=t.createElement("script");n.async=!0,n.type="text/javascript",n.src="https://cdn.livechatinc.com/tracking.js",t.head.appendChild(n)}};!n.__lc.asyncInit&&e.init(),n.LiveChatWidget=n.LiveChatWidget||e}(window,document,[].slice))
+</script>
+<noscript><a href="https://www.livechat.com/chat-with/19034585/" rel="nofollow">Chat with us</a>, powered by <a href="https://www.livechat.com/?welcome" rel="noopener nofollow" target="_blank">LiveChat</a></noscript>
+<!-- End of LiveChat code -->
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
