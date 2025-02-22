@@ -1,0 +1,257 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<div class="page_title" style="background: #df543f;display: flex;justify-content: space-between;padding: 12px 12px;border-radius: 0;margin: 0;">
+  <div onclick="window.location.href='index.html'"><i class="fa fa-chevron-left"></i></div>
+  <div>Withdraw</div>
+  <div></div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<span style="color:#0a4c7a;"><h2>Rp.0</h2></span>
+
+
+
+<p></p>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Withdraw</title>
+<style>
+body {
+font-family: Arial, sans-serif;
+background-color: #f0f0f0;
+}
+.container {
+width: 330px;
+margin: 50px auto;
+padding: 20px;
+background-color: #fff;
+border: 0px solid #ddd;
+border-radius: 10px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.0);
+}
+.form-group {
+margin-bottom: 20px;
+}
+.form-group label {
+display: block;
+margin-bottom: 1px;
+}
+.form-group input[type="text"], .form-group input[type="text"] {
+width: 100%;
+height: 50px;
+padding: 10px;
+border: 1px solid #ccc;
+border-radius: 5px;
+}
+.form-group select {
+width: 100%;
+height: 40px;
+padding: 10px;
+border: 1px solid #ccc;
+border-radius: 5px;
+}
+#btn-withdraw {
+width: 100%;
+height: 45px;
+padding: 10px;
+border: none;
+border-radius: 5px;
+background-color: #4CAF50;
+color: #fff;
+cursor: pointer;
+}
+#btn-withdraw:hover {
+background-color: #3e8e41;
+}
+#hasil-withdraw {
+margin-top: 20px;
+padding: 20px;
+background-color: #f0f0f0;
+border: 1px solid #ddd;
+border-radius: 10px;
+}
+</style>
+</head>
+<body>
+<div class="container">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+
+
+<style>
+.menu-item:active {
+transform: scale(1.1);
+background-color: #2f6f31;
+transition: transform 0.0s ease, background-color 0.0s ease;
+}
+
+.menu-item:focus {
+transform: scale(1.1);
+background-color: #2f6f31;
+}
+</style>
+
+
+
+
+
+<form id="form-withdraw">
+<div class="form-group">
+<label for="nomor-rekening">Jumlah Withdraw:</label>
+<input type="text" id="nomor-rekening" name="nomor-rekening" placeholder="Masukkan jumlah withdraw" required oninput="this.value = this.value.replace(/\D/g, '').replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.')">
+
+<p></p>
+<div class="form-group">
+  <label for="nama-rekening">Nama Rekening:</label>
+  <input type="text" id="nama-rekening" name="nama-rekening" placeholder="Masukkan Nama rekening" required>
+</div>
+
+
+
+</div>
+<div class="form-group">
+<label for="jumlah-withdraw">Nomor rekening:</label>
+<input type="text" id="jumlah-withdraw" name="jumlah-withdraw" placeholder="Masukkan Nomor rekening" required>
+</div>
+
+
+
+
+<div class="form-group">
+<label for="bank">Pilih Bank/E-Wallet</label>
+<select id="bank" name="bank" required>
+<option value="">--Pilih Bank/E-Wallet--</option>
+
+
+
+
+ <option value="BCA">BCA</option>
+<option value="Mandiri">Mandiri</option>
+<option value="BNI">BNI</option>
+<option value="BRI">BRI</option>
+<option value="Danamon">Danamon</option>
+<option value="CIMB Niaga">CIMB Niaga</option>
+<option value="Maybank">Maybank</option>
+<option value="Panin Bank">Panin Bank</option>
+<option value="Permata Bank">Permata Bank</option>
+
+<option value="OVO">OVO</option>
+<option value="GoPay">GoPay</option>
+<option value="DANA">DANA</option>
+<option value="LinkAja">LinkAja</option>
+<option value="ShopeePay">ShopeePay</option>
+<option value="PayMaya">PayMaya</option>
+<option value="GrabPay">GrabPay</option>
+<option value="Sakuku">Sakuku</option>      
+
+
+
+
+
+</select>
+</div>
+<button id="btn-withdraw">Withdraw</button>
+</form>
+<div id="hasil-withdraw"></div>
+</div>
+<script>
+  
+const formWithdraw = document.getElementById("form-withdraw");
+
+
+const btnWithdraw = document.getElementById("btn-withdraw");
+
+
+const hasilWithdraw = document.getElementById("hasil-withdraw");
+
+
+const jumlahWithdrawInput = document.getElementById("jumlah-withdraw");
+
+jumlahWithdrawInput.addEventListener("input", (e) => {
+const nilai = e.target.value.replace(/\D/g, '');
+const hasil = nilai.replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.');
+e.target.value = hasil;
+});
+
+btnWithdraw.addEventListener("click", (e) => {
+e.preventDefault();
+
+
+const nomorRekening = document.getElementById("nomor-rekening").value.trim()
+
+
+
+const jumlahWithdraw = document.getElementById("jumlah-withdraw").value.trim();
+const bank = document.getElementById("bank").value.trim();
+
+if (!nomorRekening) {
+alert("Silakan isi Jumlah Withdraw!");
+
+
+} else if (!jumlahWithdraw) {
+alert("Silakan isi Nama dan Nomor Rekening!");
+} else if (!bank) {
+alert("Silakan pilih Bank/E-Wallet!");
+} else {
+alert("Saldo tidak cukup!");
+hasilWithdraw.innerHTML = `<h4>
+
+
+<span style="color:#f51317;"><h2></h2>Withdraw gagal saldo anda tidak cukup! </span>
+<p></p>
+
+
+
+
+</h4> <p>Jumalah Withdraw: Rp${nomorRekening}</p> <p>Nomor rekening: ${jumlahWithdraw}</p> <p>Akun Bank: ${bank}</p>`;
+}
+});
+</script>
+</body>
+</html>
+
+<span style="color:#f51317;"><h2></h2>1. Minimal Withdraw adalah Rp 20,000</span>
+
+
+<span style="color:#f51317;"><h2></h2>2. Withdraw online 24 jam, sabtu dan minggu tetap beroperasi</span>
+
+
+
+<span style="color:#f51317;"><h2></h2>3. Tidak ada batas waktu dan anda dapat menarik dana kapan saja</span>
+<p></p>
+
+
+<span style="color:#f51317;"><h2></h2>4. 1% dari biaya penarikan digunakan sebagai biaya perawatan platform</span>
+<p></p>
+
+
+<span style="color:#f51317;"><h2></h2>5. Withdraw akan tiba dalam waktu maksimal 20 menit</span>
+<p></p>
+
+
+<span style="color:#f51317;"><h2></h2>6. Masukkan informasi akun Withdraw yang benar untuk Withdraw. Jika informasi yang dimasukkan salah, proses Withdraw akan gagal Dan saldo dikembalikan, </span>
+
+
+<span style="color:#f51317;"><h2></h2></span>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
